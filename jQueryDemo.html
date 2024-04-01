@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Sample</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>jQuery Sample</h2>
+<button id="changeText">Change Text and Color</button>
+<p id="sampleParagraph">This is a sample paragraph.</p>
+
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#sampleParagraph {
+    padding: 10px;
+    background-color: lightgray;
+}
+
+
+$(document).ready(function() {
+    $("#changeText").click(function() {
+        // Change the text of the paragraph
+        $("#sampleParagraph").text("The text and color have been changed!");
+
+        // Change the background color of the paragraph
+        $("#sampleParagraph").css("background-color", "lightblue");
+    });
+});
